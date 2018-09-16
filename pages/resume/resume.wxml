@@ -1,0 +1,76 @@
+<view class="resume">
+    <view class="resume-top">
+      <image src="{{namejson[2].nameUrl}}" class="resume-img" mode='aspectFill'></image>
+      <text class="resume-name">万婷 Web前端工程师</text>
+       <text class="resume-name">工作经验：3年</text>
+    </view>
+    <view class="resume-title">
+       <text>联系电话：18613802931</text>
+       <text>出生地：江西省鹰潭市</text>
+       <text>坐标：北京市昌平区融泽嘉园</text>
+       <text>邮箱：1060083667@qq.com</text>
+    </view>
+    <view class="resume-list">
+       <text class="resume-listtop">教育背景：</text>
+       <view>2011.09 - 2015.6    江西中医药大学</view>
+       <text>计算机科学与技术   本科 </text>
+    </view>
+     <view class="resume-list">
+       <text class="resume-listtop">工作经验：</text>
+       <view class="resume-miao">
+          <view class="resume-project">
+            <text class="resume-num">1</text>
+            <text>北京华唐中科科技集团股份有限公司</text>
+          </view>
+          <view class="resume-title2">
+            <text>就职时间：2016.11-至今</text>
+            <text>职位：Web前端工程师</text>
+          </view>
+          <view class="resume-body">
+            <text class="resume-listtop2">工作描述：</text>
+            <view>1）负责网站开发/系统页面开发并梳理系统需求和框架流程；</view>
+            <view>2）规划梳理并设计简单的app页面； </view>
+            <view>3）负责维护修改以及完成的一些系统和网站；</view>
+            <view>4）参与编写项目开发过程文档并制作相关流程图。</view>
+            <view class="resume-content">目前，参与的页面开发项目有商城开发、3d打印系统、扶贫项目、斑袋马项目、GIS实训平台项目、资源管理平台、工业机器人教师实训平台、VR实训平台、电商大赛系统；设计的APP项目有：商城APP、考勤系统APP;设计的其他系统有：扶贫项目的指挥系统。</view>
+          </view>
+       </view>
+
+        <view class="resume-miao resume-miao2">
+          <view class="resume-project">
+            <text class="resume-num">2</text>
+            <text>江苏一车一道信息科技有限公司</text>
+          </view>
+          <view class="resume-title2">
+            <text>就职时间：2016.7-2016.9 </text>
+            <text>职位：Web前端工程师</text>
+          </view>
+          <view class="resume-body">
+            <text class="resume-listtop2">工作描述：</text>
+            <view>1）负责公司官网的制作、改版和修改（响应式）；</view>
+            <view>2）公司pc版的制作（电商）和移动端的html页面的制作； </view>
+          </view>
+       </view>
+
+     <view class="resume-miao resume-miao3">
+          <view class="resume-project">
+            <text class="resume-num">3</text>
+            <text>苏州伽勒信息科技有限公司</text>
+          </view>
+          <view class="resume-title2">
+            <text>就职时间：2015.7—2016.6</text>
+            <text>职位：Web前端工程师</text>
+          </view>
+          <view class="resume-body">
+            <text class="resume-listtop2">工作描述：</text>
+            <view>1）负责网站开发，主要是开发公司官网（有自适应网站）、已完成的网站维护；</view>
+            <view>2）负责微信开发，主要是微信订阅号和微信服务号；  </view>
+          </view>
+       </view>
+    </view>
+
+    <view class="resume-list">
+       <text class="resume-listtop">自我评价：</text>
+       <text>我为人友善、真诚，做事细致、专注，有很强的责任心，学习能力与适应能力强，喜欢与他人交谈，热爱生活。最显著的性格标签是认真，有着沉静内敛、善于思考和研究的特质，热爱web前端知识。</text>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="indexbody">
+    <view wx:for="{{namejson}}" wx:key="{{indexName.nameId}}" wx:for-item="indexName" class="indexList">
+       <navigator url="../details/details?details={{indexName.nameId}}">
+          <image src="{{indexName.nameUrl}}" mode='aspectFill'></image>
+          <text>{{indexName.name}}</text>
+        </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/details/details.wxss */
+.details{
+  padding:30rpx;
+}
+.details-top{
+  border-bottom:1px dashed #ddd;
+}
+.details-title{
+  width:100%;
+  text-align: center;
+  display:inline-block;
+}
+.details-time{
+  font-size:30rpx;
+  color:#999;
+  width:100%;
+  text-align: center;
+  display:inline-block;
+  margin-bottom: 20rpx;
+}
+.details-img{
+  text-align: center;
+  margin-top:20rpx;
+}
+.details-body{
+  font-size:30rpx;
+  line-height:60rpx;
+  color:#666;
+}

@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/resume/resume",
+    "pages/Mydiary/Mydiary",
+    "pages/details/details"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#377ef1",
+    "navigationBarTitleText": "sedlice的生活",
+    "enablePullDownRefresh":true,
+    "navigationBarTextStyle":"#fff"
+  },
+"tabBar": {
+  "color":"#333",
+  "selectedColor":"#377ef1",
+  "backgroundColor":"#eee",
+  "position":"bottom",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "天气预报",
+      "iconPath": "pages/img/home.png",
+      "selectedIconPath": "pages/img/home1.png"
+    },
+    {
+      "pagePath": "pages/Mydiary/Mydiary",
+      "text": "我的日记",
+      "iconPath":"pages/img/diary.png",
+      "selectedIconPath":"pages/img/diary1.png"
+    },
+    {
+      "pagePath": "pages/resume/resume",
+      "text": "我的简介",
+      "iconPath": "pages/img/resume.png",
+      "selectedIconPath": "pages/img/resume1.png"
+    }
+  ]
+},
+"networkTimeout": {
+  "request": 10000,
+  "downloadFile": 10000
+},
+"debug": true
+}

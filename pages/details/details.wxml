@@ -1,0 +1,13 @@
+<!--pages/details/details.wxml-->
+<view class="details">
+  <view class="details-top">
+      <text class="details-title">{{namejson[type-1].name}}</text>
+      <text class="details-time">日期：{{namejson[type-1].nameTime}}</text>
+  </view>
+  <view class="details-img">
+      <image src="{{namejson[type-1].nameUrl}}" mode="widthFix"></image>
+  </view>
+  <view class="details-body">
+     {{namejson[type-1].nameBody}}
+  </view>
+</view>

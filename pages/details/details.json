@@ -1,0 +1,9 @@
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#377ef1",
+    "navigationBarTitleText": "sedlice的生活",
+    "enablePullDownRefresh": "true",
+    "navigationBarTextStyle": "#fff"
+  }
+}
