@@ -14,6 +14,33 @@ Page({
     weatherData: '' ,
     weatherResults:''
   },
+  //下拉刷新
+  onPullDownRefresh() {
+    wx.showNavigationBarLoading() 
+
+    var that = this;
+    // 新建百度地图对象 
+    var BMap = new bmap.BMapWX({
+      ak: 'TizEGIjZCznfozNh7SRP4HNrU3XYT4pf'
+    });
+    var fail = function (data) {
+      console.log(data)
+    };
+    var success = function (data) {
+      var weatherData = data.currentWeather[0];
+      var weatherResults = data.originalData.results[0];
+      that.setData({
+        weatherData: weatherData,
+        weatherResults: weatherResults,
+      });
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }
+    BMap.weather({
+      fail: fail,
+      success: success
+    }); 
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -76,42 +103,54 @@ Page({
   //改变城市
   changeCity:function(){
     var that = this;
-    // 新建百度地图对象 
-    var BMap = new bmap.BMapWX({
-      ak: 'TizEGIjZCznfozNh7SRP4HNrU3XYT4pf'
-    });
-    var fail = function (data) {
-      console.log(data)
-    };
-    var success = function (data) {
-      var weatherData = data.currentWeather[0];
-      var weatherResults = data.originalData.results[0];
-      that.setData({
-        weatherData: weatherData,
-        weatherResults: weatherResults,
-      });
-    }
-
-//请求经纬度
-    wx.request({
-      url: 'https://api.map.baidu.com/geocoder?address=鹰潭市&output=json&key=37492c0ee6f924cb5e934fa08c6b1676&city=%E5%8C%97%E4%BA%AC%E5%B8%82',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
+    wx.chooseLocation({
       success: function (res) {
-        var lat = res.data.result.location.lat;
-        var lng = res.data.result.location.lng;
-  
-        // 发起weather请求 
-        var jwd = lng + ',' +lat;
-        //console.log(jwd);
+        //console.log(res, "location")//获取选取的地点
+        // 新建百度地图对象 
+        var BMap = new bmap.BMapWX({
+          ak: 'TizEGIjZCznfozNh7SRP4HNrU3XYT4pf'
+        });
+        var fail = function (data) {
+          console.log(data)
+        };
+        var success = function (data) {
+          var weatherData = data.currentWeather[0];
+          var weatherResults = data.originalData.results[0];
+          that.setData({
+            weatherData: weatherData,
+            weatherResults: weatherResults,
+          });
+        }
         BMap.weather({
-          location: jwd,
-          fail: fail,
-          success: success
-        }); 
+          location: res.longitude + ',' + res.latitude,
+           fail: fail,
+           success: success
+       }); 
       }
     })
+   
+
+
+// //请求经纬度
+//     wx.request({
+//       url: 'https://api.map.baidu.com/geocoder?address=鹰潭市&output=json&key=37492c0ee6f924cb5e934fa08c6b1676&city=%E5%8C%97%E4%BA%AC%E5%B8%82',
+//       header: {
+//         'content-type': 'application/json' // 默认值
+//       },
+//       success: function (res) {
+//         var lat = res.data.result.location.lat;
+//         var lng = res.data.result.location.lng;
+  
+//         // 发起weather请求 
+//         var jwd = lng + ',' +lat;
+//         //console.log(jwd);
+//         BMap.weather({
+//           location: jwd,
+//           fail: fail,
+//           success: success
+//         }); 
+//       }
+//     })
   },
   getUserInfo: function(e) {
    // console.log(e)
